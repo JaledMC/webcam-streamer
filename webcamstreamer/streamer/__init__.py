@@ -34,7 +34,7 @@ config.read(os.path.expanduser('~/.webcam-streamer.cfg'))
 if config.getboolean('cameras', 'use_mock'):
     from camera_mock import Camera, list_camera_ids
 else:
-    from camera import Camera, list_camera_ids
+    from .camera import Camera, list_camera_ids
 
 app = Flask(__name__)
 socketio = SocketIO(app)

@@ -23,7 +23,7 @@ from flask_socketio import SocketIO, emit
 config = configparser.ConfigParser()
 
 from .defaults import defaults
-defaults_buf = StringIO.StringIO(defaults)
+defaults_buf = StringIO(defaults)
 try:
     config.read_file(defaults_buf)
 except AttributeError:

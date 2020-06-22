@@ -2,7 +2,10 @@
 
 import re
 import subprocess
-from StringIO import StringIO
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 
 import cv2
 from PIL import Image

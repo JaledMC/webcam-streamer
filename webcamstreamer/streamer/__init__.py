@@ -22,7 +22,7 @@ from flask import Flask, render_template, Response, request
 from flask_socketio import SocketIO, emit
 config = configparser.ConfigParser()
 
-from defaults import defaults
+from .defaults import defaults
 defaults_buf = StringIO.StringIO(defaults)
 try:
     config.read_file(defaults_buf)

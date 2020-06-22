@@ -19,7 +19,7 @@ from gevent import monkey
 monkey.patch_all()
 
 from flask import Flask, render_template, Response, request
-from flask.ext.socketio import SocketIO, emit
+from flask_cache import SocketIO, emit
 
 config = configparser.ConfigParser()
 

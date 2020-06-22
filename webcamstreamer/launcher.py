@@ -39,7 +39,7 @@ def main():
     config = configparser.ConfigParser()
 
     from .streamer.defaults import defaults
-    defaults_buf = StringIO.StringIO(defaults)
+    defaults_buf = StringIO(defaults)
     try:
         config.read_file(defaults_buf)
     except AttributeError:
